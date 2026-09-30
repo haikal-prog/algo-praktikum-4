@@ -1,0 +1,23 @@
+# for i in range(7, 0, -1):
+#     print(str(i) * i)
+
+import math
+
+bulan = int(input("Masukkan bulan: "))
+tahun = int(input("Masukkan tahun: "))
+
+while bulan < 1 or bulan > 12:
+    print("Bulan harus 1-12")
+    bulan = int(input("Masukkan bulan: "))
+
+if bulan == 2:
+    if tahun % 4 == 0:
+        hari = 29
+    else:
+        hari = 28
+elif bulan == 4 or bulan == 6 or bulan == 9 or bulan == 11:
+    hari = 30
+else:
+    hari = 31
+
+print("Jumlah hari dalam bulan tersebut:", hari)
